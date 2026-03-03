@@ -190,7 +190,7 @@ export const ChatLayout = () => {
   }
 
   return (
-    <div className="relative flex h-screen w-full overflow-hidden bg-white">
+    <div className="relative flex h-dvh w-full overflow-hidden bg-white">
       {/* Toast notifications */}
       {toasts.length > 0 && (
         <div className="pointer-events-none fixed right-4 top-4 z-[100] flex flex-col gap-2">
@@ -204,7 +204,7 @@ export const ChatLayout = () => {
       <div
         className={`${
           mobileView === 'sidebar' ? 'flex' : 'hidden'
-        } w-full flex-col border-r border-slate-200 md:flex md:w-[320px] lg:w-[360px] xl:w-[380px]`}
+        } h-full w-full flex-col border-r border-slate-200 md:flex md:w-[320px] lg:w-[360px] xl:w-[380px]`}
       >
         <Sidebar
           currentUser={user}
@@ -219,7 +219,7 @@ export const ChatLayout = () => {
       <div
         className={`${
           mobileView === 'chat' ? 'flex' : 'hidden'
-        } flex-1 flex-col md:flex`}
+        } h-full min-h-0 flex-1 flex-col md:flex`}
       >
         {selectedChat ? (
           <ChatWindow

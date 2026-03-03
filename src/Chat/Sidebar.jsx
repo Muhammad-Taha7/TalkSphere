@@ -298,7 +298,7 @@ export const Sidebar = ({ currentUser, onSelectChat, selectedChat, onLogout, unr
       )}
 
       {/* ═══ Content area ═══ */}
-      <div className="flex-1 overflow-y-auto scrollbar-thin">
+      <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain scrollbar-thin safe-bottom">
 
         {/* ── Search results ── */}
         {isSearching && (
